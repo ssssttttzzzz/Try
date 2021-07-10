@@ -14,7 +14,6 @@ def get_bus_info(station):
 app = Flask(__name__)
 @app.route('/bus/<station>')
 def bus_info(station):
-    import bus
     info = bus.get_bus_info(station)
     return {
         "msg": "success",
