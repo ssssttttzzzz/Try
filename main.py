@@ -11,6 +11,7 @@ def get_bus_info(station):
         bus_info = f"{bus_name} 还有 {bus_arrival_time} 分钟到达 {station}"
         info.append({bus_name: bus_info})
     return info
+sd='a'
 app = Flask(__name__)
 @app.route('/bus/<station>')
 def bus_info(station):
