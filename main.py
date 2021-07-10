@@ -21,7 +21,7 @@ def bus_info(station):
     }
 @app.route('/')
 def hello_world():
-    return 'ok ok! that''s fine'
+    return get_bus_info(sd)
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=8080)
