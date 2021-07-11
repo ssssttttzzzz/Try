@@ -22,6 +22,7 @@ def bus_info(station):
     }
 @app.route('/')
 def hello_world():
+    print('first try!\n')
     return 'oh lalala'
 
 
