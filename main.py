@@ -12,7 +12,7 @@ def get_bus_info(station):
         info.append({bus_name: bus_info})
     return info
 def get_jieguo(shu):
-    t=shu*shu
+    t=int(shu)*int(shu)
     return t
 app = Flask(__name__)
 @app.route('/bus/<station>')
