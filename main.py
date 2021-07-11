@@ -11,7 +11,9 @@ def get_bus_info(station):
         bus_info = f"{bus_name} has {bus_arrival_time} minutes to {station}"
         info.append({bus_name: bus_info})
     return info
-
+def get_jieguo(shu):
+    t=shu*shu
+    return t
 app = Flask(__name__)
 @app.route('/bus/<station>')
 def bus_info(station):
@@ -23,6 +25,10 @@ def bus_info(station):
 @app.route('/')
 def hello_world():
     return 'oh lalala'
+@app.route('/js/<shu>')
+def pingfang(shu):
+    jieguo= get_jieguo(shu)
+    return jieguo
 
 
 if __name__ == "__main__":
