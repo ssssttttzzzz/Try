@@ -25,10 +25,10 @@ def bus_info(station):
 @app.route('/')
 def hello_world():
     return 'oh lalala'
-@app.route('/js/<shu>')
+@app.route('/js/<int:shu>')
 def pingfang(shu):
     jieguo= get_jieguo(shu)
-    return {jieguo}
+    return '<h1>welcome %s</h1>' %shu
 
 
 if __name__ == "__main__":
