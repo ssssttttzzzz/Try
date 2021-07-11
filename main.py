@@ -24,7 +24,8 @@ def bus_info(station):
     }
 @app.route('/')
 def hello_world():
-    return 'oh lalala'
+    user_agent = request.headers.get('User-Agent') 
+    return '<p>Your browser is %s</p>' % user_agent
 @app.route('/js/<int:shu>')
 def pingfang(shu):
     jieguo= get_jieguo(shu)
