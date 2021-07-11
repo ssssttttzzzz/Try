@@ -15,7 +15,7 @@ sd='a'
 app = Flask(__name__)
 @app.route('/bus/<station>')
 def bus_info(station):
-    info = bus.get_bus_info(station)
+    info = get_bus_info(station)
     return {
         "msg": "success",
         "data": info
