@@ -28,7 +28,7 @@ def hello_world():
 @app.route('/js/<int:shu>')
 def pingfang(shu):
     jieguo= get_jieguo(shu)
-    return '<h1>welcome %s</h1>' %shu
+    return '<h1>welcome %s</h1>' %jieguo
 
 
 if __name__ == "__main__":
