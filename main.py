@@ -28,10 +28,12 @@ def bus_info(station):
 def new_post():
     post = request.json
     dict1 = {"name": "monkey", "age": 23}
-    for i,e in post.items():
-        dict1[i]=e
-    ta=int(dict1['a'])+int(dict1['b'])
-    c={'jieguo':ta}
+    try:
+        for i,e in post.items():
+            dict1[i]=e
+        ta=int(dict1['a'])+int(dict1['b'])
+        c={'jieguo':ta}
+    except: pass
     return jsonify(c)
  
     
