@@ -24,14 +24,11 @@ def bus_info(station):
         "msg": "success",
         "data": info
     }
-@app.route('/cx')
-def jiafa(*shuji):
-    l=[]
-    for i in shuji:
-        l.append(i)
-    c=l[0]+l[1]
-    
-    return '<h1>is %s</h1>' %c
+@app.route('/cx',methods=['POST'])
+def new_post():
+    post = request.json
+    return post
+ 
     
 @app.route('/')
 def hello_world():
