@@ -31,7 +31,8 @@ def new_post():
     try:
         for i,e in post.items():
             dict1[i]=e
-        ta=int(dict1[5])+int(dict1[11])
+        dict2=eval(dict1)
+        ta=int(dict2['a'])+int(dict2['b'])
         c={'jieguo':ta}
     except: pass
     return jsonify(c)
