@@ -27,7 +27,8 @@ def bus_info(station):
 @app.route('/cx',methods=['POST'])
 def new_post():
     post = request.json
-    return post
+    dict1 = {"name": "monkey", "age": 23}
+    return jsonify(dict1)
  
     
 @app.route('/')
