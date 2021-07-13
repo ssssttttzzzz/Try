@@ -32,7 +32,7 @@ def new_post():
         dict1[i]=e
     ta=int(dict1['a'])+int(dict1['b'])
     c={'jieguo':ta}
-    return jsonify(c)
+    return {'jieg':ta}
  
     
 @app.route('/')
