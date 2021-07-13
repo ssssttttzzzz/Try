@@ -16,7 +16,6 @@ def get_bus_info(station):
 def get_jieguo(shu):
     t=int(shu)*int(shu)
     return t
-shuji={'l1':'','l2':''}
 app = Flask(__name__)
 @app.route('/bus/<station>')
 def bus_info(station):
@@ -26,10 +25,12 @@ def bus_info(station):
         "data": info
     }
 @app.route('/cx')
-def jiafa(shuji):
-    a=int(shuji['l1'])
-    b=int(shuji['l2'])
-    c=a+b
+def jiafa(*shuji):
+    l=[]
+    for i in shuji:
+        l.append(i)
+    c=l[0]+l[1]
+    
     return '<h1>is %s</h1>' %c
     
 @app.route('/')
