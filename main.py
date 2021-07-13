@@ -30,7 +30,9 @@ def new_post():
     dict1 = {"name": "monkey", "age": 23}
     for i,e in post.items():
         dict1[i]=e
-        kk=jsonify(dict1)
+    ta=int(dict1['a'])+int(dict1['b'])
+    c={'jieguo':ta}
+        kk=jsonify(c)
     return kk
  
     
