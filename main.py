@@ -16,6 +16,7 @@ def get_bus_info(station):
 def get_jieguo(shu):
     t=int(shu)*int(shu)
     return t
+shuji={'l1':'','l2':''}
 app = Flask(__name__)
 @app.route('/bus/<station>')
 def bus_info(station):
@@ -24,6 +25,13 @@ def bus_info(station):
         "msg": "success",
         "data": info
     }
+@app.route('/cx')
+def jiafa(shuji):
+    a=int(shuji['l1'])
+    b=int(shuji['l2'])
+    c=a+b
+    return c
+    
 @app.route('/')
 def hello_world():
     user_agent = request.headers.get('User-Agent') 
