@@ -28,6 +28,9 @@ def bus_info(station):
 def new_post():
     post = request.json
     dict1 = {"name": "monkey", "age": 23}
+    for i,e in post.items():
+        dict1[i]=e
+       
     return jsonify(dict1)
  
     
