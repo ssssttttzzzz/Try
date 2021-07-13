@@ -30,7 +30,7 @@ def jiafa(shuji):
     a=int(shuji['l1'])
     b=int(shuji['l2'])
     c=a+b
-    return c
+    return '<h1>is %s</h1>' %c
     
 @app.route('/')
 def hello_world():
