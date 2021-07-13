@@ -27,11 +27,11 @@ def bus_info(station):
 @app.route('/cx',methods=['POST'])
 def new_post():
     post = request.json
-    dict1 = {"name": "monkey", "age": 23}
+    dict1 = {"name": "monkey", "hge": 23}
     try:
         for i,e in post.items():
             dict1[i]=e
-        ta=int(dict1['a'])+int(dict1['b'])
+        ta=int(dict1[5])+int(dict1[11])
         c={'jieguo':ta}
     except: pass
     return jsonify(c)
