@@ -33,7 +33,7 @@ def new_post():
     ta=int(dict2['a'])+int(dict2['b'])
     c={'jieguo':ta}
     
-    return jsonify(c)
+    return '<h1>hhh</h1>'
  
     
 @app.route('/')
