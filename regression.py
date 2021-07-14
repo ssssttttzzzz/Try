@@ -8,3 +8,12 @@ def standRegres(xArr, yArr):
         return
     ws = xTx.I * (xMat.T * yMat)
     return ws
+def answer(yuce,ws):
+    xMAtnew=numpy.mat(yuce)
+    yHat=xMatnew*ws
+    b={}
+    k = '1'
+    for i in yHat:
+        b[k]=float(str(yHat[0])[2:-2])
+        k=str(int(k)+1)
+    return b
