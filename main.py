@@ -16,12 +16,6 @@ def get_bus_info(station):
 def get_jieguo(shu):
     t=int(shu)*int(shu)
     return t
-def to_json(self):
-    json1={
-        'asd'='ww'
-        'post_count': 1
-    }
-    return json1
 app = Flask(__name__)
 @app.route('/bus/<station>')
 def bus_info(station):
@@ -33,12 +27,13 @@ def bus_info(station):
 @app.route('/cx',methods=['POST'])
 def new_post():
     post = request.json
+    post1=post
     dict1 = {"name": "monkey", "hge": 23}
     dict2=dict1.copy()
     dict2.update(eval(json.dumps(post)))
     ta=int(dict2['a'])+int(dict2['b'])
     c={'jieguo':ta}
-    return jsonify(post.to_json())
+    return post1
  
 @app.route('/play') 
 def jsb():
