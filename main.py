@@ -33,7 +33,7 @@ def new_post():
     ta=int(dict2['a'])+int(dict2['b'])
     c={'jieguo':ta}
     dict2.update(c)
-    return jsonify(dict2)
+    return json.loads(dict2)
  
     
 @app.route('/')
