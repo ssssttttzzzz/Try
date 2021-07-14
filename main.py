@@ -32,7 +32,7 @@ def new_post():
     dict2.update(eval(json.dumps(post)))
     ta=int(dict2['a'])+int(dict2['b'])
     c={'jieguo':ta}
-    return '<h1>yeah %s</h1>' %ta
+    return dict1 dict2 c
  
 @app.route('/play') 
 def jsb():
