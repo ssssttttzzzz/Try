@@ -31,13 +31,9 @@ def new_post():
     dict1 = {"name": "monkey", "hge": 23}
     dict2=dict1.copy()
     dict2.update(eval(json.dumps(post)))
-    ta=int(dict2['a'])+int(dict2['b'])
-    c={'jieguo':ta}
-    return post1
-@app.route('/p')
-def fan():
-    aa={'ss':3}
-    return jsonify(aa)
+    
+    return jsonify(dict2)
+
 @app.route('/play') 
 def jsb():
     canshu=random.randint(0,2)
