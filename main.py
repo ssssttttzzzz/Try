@@ -30,6 +30,8 @@ def new_post():
     dict1 = {"name": "monkey", "hge": 23}
     dict2=dict1.copy()
     dict2.update(post)
+    aaa=dict2['hge']
+    dict2['hge']=int(aaa)+3
     return jsonify(dict2)
 
 @app.route('/play') 
