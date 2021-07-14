@@ -19,7 +19,7 @@ def get_jieguo(shu):
 def to_json(self):
     json1={
         'asd'='ww'
-        'post_count': self.posts.count()
+        'post_count': 1
     }
     return json1
 app = Flask(__name__)
