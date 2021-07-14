@@ -27,11 +27,9 @@ def bus_info(station):
 @app.route('/cx',methods=['POST'])
 def new_post():
     post = request.json
-    post1=post
     dict1 = {"name": "monkey", "hge": 23}
     dict2=dict1.copy()
-    dict2.update(eval(json.dumps(post)))
-    
+    dict2.update(post)
     return jsonify(dict2)
 
 @app.route('/play') 
