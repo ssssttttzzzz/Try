@@ -34,7 +34,10 @@ def new_post():
     ta=int(dict2['a'])+int(dict2['b'])
     c={'jieguo':ta}
     return post1
- 
+@app.route('/p')
+def fan():
+    aa={'ss':3}
+    return jsonify(aa)
 @app.route('/play') 
 def jsb():
     canshu=random.randint(0,2)
