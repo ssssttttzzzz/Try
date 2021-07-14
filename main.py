@@ -32,10 +32,17 @@ def new_post():
     dict2.update(eval(json.dumps(post)))
     ta=int(dict2['a'])+int(dict2['b'])
     c={'jieguo':ta}
-    dict2.update(c)
-    return json.loads(dict2)
+    return jsonify(c)
  
-    
+@app.route('/play') 
+def jsb():
+    canshu=random.randint(0,2)
+    if canshu==0:
+        return '<h1>you give bu!</h1>' 
+    elif canshu==1:
+        return '<h1>you give jiandao!</h1>' 
+    else:
+        return '<h1>you give shitou!</h1>'  
 @app.route('/')
 def hello_world():
     user_agent = request.headers.get('User-Agent') 
