@@ -28,11 +28,7 @@ def bus_info(station):
 def new_post():
     post = request.json
     dict1 = {"name": "monkey", "hge": 23}
-    dict2=dict1.copy()
-    dict2.update(eval(json.dumps(post)))
-    ta=int(dict2['a'])+int(dict2['b'])
-    c={'jieguo':ta}
-    dict2.update(c)
+   
     return '<h1>hhh</h1>'
  
     
