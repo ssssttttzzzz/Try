@@ -36,10 +36,10 @@ def new_post():
 @app.route('/cx2',methods=['POST'])
 def new_post2():
     post=request.json
-    xArr=[[1,1],[1,1.1],[1,1.2],[1,1.3],[1,1.4]]
-    yArr=[1,2,3,4,5]
+    xArr=post['x']
+    yArr=post['y']
     ws=regression.standRegres(xArr,yArr)
-    yuce=[[1,2],[1,3]]
+    yuce=post['yuce']
     jieguo=regression.answer(yuce,ws)
     jieguo.update(post)
     return jsonify(jieguo)
