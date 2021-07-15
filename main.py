@@ -61,7 +61,7 @@ def display_img(filename):
         if filename is None:
             pass
         else:
-            image_data = open(filename, "rb").read()
+            image_data = open(/filename, "rb").read()
             response = make_response(image_data)
             response.headers['Content-Type'] = 'image/jpg'
             return response
