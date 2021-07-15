@@ -44,8 +44,9 @@ def new_post2():
     jieguo=regression.answer(yuce,ws)
     jieguo.update(post)
     return jsonify(jieguo)
-@app.route('/play') 
+@app.route('/play/<string:name>') 
 def jsb():
+    random.seed(len(name))
     canshu=random.randint(0,2)
     if canshu==0:
         image_data = open('1.jpg', "rb").read()
