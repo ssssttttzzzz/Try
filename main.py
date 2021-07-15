@@ -45,8 +45,11 @@ def new_post2():
     jieguo.update(post)
     return jsonify(jieguo)
 @app.route('/play/<string:name>') 
-def jsb():
-    random.seed(len(name))
+def jsb(name):
+    bb=0
+    for i in name:
+        bb+=ord(i)
+    random.seed(bb)
     canshu=random.randint(0,2)
     if canshu==0:
         image_data = open('1.jpg', "rb").read()
