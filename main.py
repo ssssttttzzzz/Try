@@ -53,20 +53,13 @@ def jsb():
         return '<h1>you give jiandao!</h1>' 
     else:
         return '<h1>you give shitou!</h1>'  
-@app.route('/img/<string:filename>', methods=['GET'])
-def display_img(filename):
-    request_begin_time = datetime.today()
-    print("request_begin_time", request_begin_time)
-    if request.method == 'GET':
-        if filename is None:
-            pass
-        else:
-            image_data = open('filename', "rb").read()
-            response = make_response(image_data)
-            response.headers['Content-Type'] = 'image/jpg'
-            return response
-    else:
-        pass
+@app.route('/img', methods=['GET'])
+def display_img():
+    image_data = open('/filename', "rb").read()
+    response = make_response(image_data)
+    response.headers['Content-Type'] = 'image/jpg'
+    return response
+  
 @app.route('/')
 def hello_world():
     user_agent = request.headers.get('User-Agent') 
