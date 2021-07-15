@@ -14,6 +14,7 @@ def answer(yuce,ws):
     b={}
     k = '1'
     for i in yHat:
-        b[k]=float(str(yHat[0])[2:-2])
+        shunxu=int(k)-1
+        b[k]=float(str(yHat[shunxu])[2:-2])
         k=str(int(k)+1)
     return b
