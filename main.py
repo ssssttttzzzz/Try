@@ -53,9 +53,9 @@ def jsb():
         return '<h1>you give jiandao!</h1>' 
     else:
         return '<h1>you give shitou!</h1>'  
-@app.route('/img', methods=['GET'])
+@app.route('/img')
 def display_img():
-    image_data = open('/filename', "rb").read()
+    image_data = open('23.jpg', "rb").read()
     response = make_response(image_data)
     response.headers['Content-Type'] = 'image/jpg'
     return response
