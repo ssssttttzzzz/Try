@@ -48,11 +48,20 @@ def new_post2():
 def jsb():
     canshu=random.randint(0,2)
     if canshu==0:
-        return '<h1>you give bu!</h1>' 
+        image_data = open('1.jpg', "rb").read()
+        response = make_response(image_data)
+        response.headers['Content-Type'] = 'image/jpg'
+        return response
     elif canshu==1:
-        return '<h1>you give jiandao!</h1>' 
+        image_data = open('2.jpg', "rb").read()
+        response = make_response(image_data)
+        response.headers['Content-Type'] = 'image/jpg'
+        return response
     else:
-        return '<h1>you give shitou!</h1>'  
+        image_data = open('3.jpg', "rb").read()
+        response = make_response(image_data)
+        response.headers['Content-Type'] = 'image/jpg'
+        return response
 @app.route('/img')
 def display_img():
     image_data = open('23.jpg', "rb").read()
