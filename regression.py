@@ -18,3 +18,13 @@ def answer(yuce,ws):
         b[k]=float(str(yHat[shunxu])[2:-2])
         k=str(int(k)+1)
     return b
+def ridgeRegres(xArr, yArr, lam=0.2):
+    xMat = mat(xArr);
+    yMat = mat(yArr).T
+    xTx = xMat.T * xMat
+    denom = xTx + eye(shape(xMat)[1]) * lam
+    if linalg.det(denom) == 0.0:
+        print("This matrix is singular, cannot do inverse")
+        return
+    ws = denom.I * (xMat.T * yMat)
+    return ws
