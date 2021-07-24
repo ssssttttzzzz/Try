@@ -40,7 +40,12 @@ def new_post2():
     xArr=post['x']
     yArr=post['y']
     yuce=post['yuce']
-    ws=regression.ridgeRegres(xArr, yArr, lam=0.2)
+    lam=0.2
+    try:
+        lam=post['lam']
+    except:
+        pass
+    ws=regression.ridgeRegres(xArr, yArr, lam)
     jieguo=regression.answer(yuce,ws)
     jieguo.update(post)
     return jsonify(jieguo)
