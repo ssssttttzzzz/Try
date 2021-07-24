@@ -39,8 +39,8 @@ def new_post2():
     post=request.json
     xArr=post['x']
     yArr=post['y']
-    ws=regression.standRegres(xArr,yArr)
     yuce=post['yuce']
+    ws=regression.ridgeRegres(xArr, yArr, lam=0.2)
     jieguo=regression.answer(yuce,ws)
     jieguo.update(post)
     return jsonify(jieguo)
