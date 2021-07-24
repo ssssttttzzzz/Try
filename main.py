@@ -40,12 +40,12 @@ def new_post2():
     xArr=post['x']
     yArr=post['y']
     yuce=post['yuce']
-    lam=0.2
+    xishu=0.2
     try:
-        lam=post['lam']
+        xishu=post['xishu']
     except:
         pass
-    ws=regression.standRegres(xArr, yArr)
+    ws=regression.lwlr(xArr[9], xArr, yArr, xishu)
     jieguo=regression.answer(yuce,ws)
     jieguo.update(post)
     return jsonify(jieguo)
