@@ -45,7 +45,7 @@ def new_post2():
         lam=post['lam']
     except:
         pass
-    ws=regression.ridgeRegres(xArr, yArr, lam)
+    ws=regression.standRegres(xArr, yArr)
     jieguo=regression.answer(yuce,ws)
     jieguo.update(post)
     return jsonify(jieguo)
