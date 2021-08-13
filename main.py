@@ -15,7 +15,7 @@ def get_bus_info(station):
         info.append({bus_name: bus_info})
     return info
 def get_jieguo(shu):
-    t=int(shu)*int(shu)
+    t=random.randint(2,5)
     return t
 app = Flask(__name__)
 @app.route('/bus/<station>')
@@ -81,7 +81,7 @@ def hello_world():
 @app.route('/js/<int:shu>')
 def pingfang(shu):
     jieguo= get_jieguo(shu)
-    return '<h1>welcome %s</h1>' %jieguo
+    return '<h1>%s!!!!</h1>' %jieguo
 
 
 if __name__ == "__main__":
